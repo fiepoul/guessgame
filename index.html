@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Guess a number</title>
+</head>
+<body>
+<div class="container">
+    <h1>Guess a number between 1 and 100</h1>
+
+    <p>Place your guess underneath: </p>
+
+    <input type="number" id="guess" placeholder="Your guess" min="1" max="20">
+
+    <!-- Check Button -->
+    <button class="btn" onclick="makeGuess()">
+        <i class="fas fa-check"></i> Check
+    </button>
+
+    <!-- Message Display -->
+    <div id="message" class="message">Start guessing...</div>
+
+    <!-- Guess History -->
+    <div id="history">
+        <h3>Guess history:</h3>
+        <ul id="guessHistory"></ul>
+    </div>
+
+    <!-- Attempts left -->
+    <p>Attempts left:
+        <progress id="attemptsProgress" value="0" max="6"></progress>
+    </p>
+
+    <!-- Highscore Display -->
+    <p id="highscore">Highscore: --</p>
+
+    <!-- Reset Button -->
+    <button class="btn again" onclick="resetGame()">
+        <i class="fas fa-redo"></i> Try Again
+    </button>
+
+    <script src="js/game.js"></script>
+</div>
+</body>
+</html>
